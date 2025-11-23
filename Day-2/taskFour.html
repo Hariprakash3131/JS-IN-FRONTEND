@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #time{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task 4:
+Use innerText to display the current time 
+inside a div when the user clicks a button.-->
+
+<p>Calender <time id="time" datetime="2004-08-16">Its My Birthday</time></p>
+<button onclick="btn()">Click The Button</button>
+<p id="show"></p>
+<script>
+    function btn(){
+      var dateShow=document.getElementById('time').innerHTML;
+      document.getElementById('show').innerHTML=dateShow
+    
+    }
+    
+</script>
+</body> 
+</html>
