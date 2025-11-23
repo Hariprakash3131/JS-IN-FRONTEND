@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="two">H1 Tag</h1>
+
+    <p id="two1">P tag</p>
+
+    <button id="btn1">Change The Text</button>
+    <script>
+        let h=document.getElementById('two')
+        let p=document.getElementById('two1')
+        let btn=document.getElementById('btn1')
+        btn.onclick=function(){
+            h.innerText="Changed The H Tag"
+            p.innerText='Changed The P Tag'
+        }
+    </script>
+</body>
+</html>
