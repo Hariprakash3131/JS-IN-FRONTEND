@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #para{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p id="para">Lorem ipsum dolor sit amet
+     consectetur adipisicing elit. Dignissimos, esse?</p>
+     <button id="btn1">View The Hidden Text</button>
+
+     <script>
+        let p=document.getElementById('para')
+        let btn=document.getElementById('btn1')
+        btn.addEventListener('click',function(){
+            p.style.display='block'
+        })
+     </script>
+</body>
+</html>
