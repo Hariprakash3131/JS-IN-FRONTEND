@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="inputBox" type="text" placeholder="Enter the any Text">
+    <button id="btn1">Submit</button>
+    <p id="storeValue"></p>
+
+    <script>
+        let input=document.getElementById('inputBox')
+        let btn=document.getElementById('btn1')
+        let copyText=document.getElementById('storeValue')
+        btn.addEventListener('click',function(){
+            let textCopy=input.value
+            copyText.innerText=textCopy
+        })
+    </script>
+</body>
+</html>
