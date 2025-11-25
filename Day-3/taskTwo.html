@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #img{
+            position: relative;
+            left: 400px;
+        }
+        #para{
+            position: relative;
+            left: 400px;
+        }
+    </style>
 </head>
 <body>
-    <img id="img" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dicecream&psig=AOvVaw0TMsVia9RHENOoCNiPls6b&ust=1764092579363000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLjC7Y-ri5EDFQAAAAAdAAAAABAE" alt="">
-    <p id="para">Lorem ipsum dolor sit amet consectetur.</p>
+    <img id="img" src="/image/ice.jpg" alt="">
+    <p id="para"></p>
 
     <script>
         let image=document.getElementById('img')
-        let p=document.getElementById('para')
-
         image.addEventListener('mouseover',function(){
-            
+            document.getElementById('para').innerHTML='Show the Text'
         })
     </script>
 </body>
 </html>
+
+<!-- Task 2
+
+Use addEventListener('mouseover') on an image to change its
+ text or description when the mouse is placed on it. -->
