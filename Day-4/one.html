@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">This is my text</p>
+    <button id="btn1">Button</button>
+     <button id="btn2">Button</button>
+
+    <script>
+        let p=document.getElementById('para')
+        let btn=document.getElementById('btn1')
+        let btnBlue=document.getElementById('btn2')
+
+        btn.addEventListener('click',function(){
+            p.style.color='red'
+        
+        })
+        btnBlue.addEventListener('click',function(){
+            p.style.color='blue'
+        })
+    </script>
+</body>
+</html>

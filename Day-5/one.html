@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nam omnis dolores asperiores odio. Obcaecati eaque expedita provident ipsam non tempore
+        
+at quod ab incidunt tenetur delectus dignissimos, voluptas a.</p>
+
+    <button id="btn1">Hide And Show</button>
+    <script>
+        let p=document.getElementById('para')
+        let btn=document.getElementById('btn1')
+        let on=false
+        btn.addEventListener('click',function(){
+           if(on===false){
+            p.style.display='block'
+            on=true
+           }
+           else{
+            p.style.display='none'
+            on=false
+           }
+        })
+    </script>
+</body>
+</html>
