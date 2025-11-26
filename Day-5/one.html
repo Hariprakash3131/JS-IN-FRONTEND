@@ -14,16 +14,14 @@ at quod ab incidunt tenetur delectus dignissimos, voluptas a.</p>
     <script>
         let p=document.getElementById('para')
         let btn=document.getElementById('btn1')
-        let on=false
+        
         btn.addEventListener('click',function(){
-           if(on===false){
-            p.style.display='block'
-            on=true
-           }
-           else{
-            p.style.display='none'
-            on=false
-           }
+          if(p.style.display ==='block' || p.style.display ===''){
+            p.style.display ='none'
+          }
+          else{
+            p.style.display ='block'
+          }
         })
     </script>
 </body>
