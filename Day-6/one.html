@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="number" placeholder="Enter the number">
+    <button id="btn1">Submit</button>
+    <p id="para"></p>
+
+    <script>
+        let inputAns=document.getElementById('input')
+        let btn =document.getElementById('btn1')
+        let p=document.getElementById('para')
+        btn.addEventListener('click',function(){
+            let ans=inputAns.value
+            ans=Number(ans)
+
+            if(ans>=18){
+                p.innerHTML='Your Eligible'
+            }
+            else{
+                p.innerHTML='your not eligible'
+            }
+        })
+    </script>
+</body>
+</html>
