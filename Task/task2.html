@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color{
+            background-color: black;
+            height: 50px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="color" placeholder="Enter the Color name">
+    <button id="btnColor">Submit The Color Name</button>
+    <p class="color" id="colorShow">Lorem ipsum dolor sit amet.</p>
+    <script>
+        let input=document.getElementById('color')
+        let btn=document.getElementById('btnColor')
+        let colorOutput=document.getElementById('colorShow')
+        btn.onclick=function(){
+            let getColor=input.value
+            if(getColor==='red'){
+                colorOutput.style.color='red'
+            }
+            else if(getColor==='green'){
+                colorOutput.style.color='green'
+            }
+            else{
+                colorOutput.style.color='white'
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- Task 2 — Color Changer With Input -->
