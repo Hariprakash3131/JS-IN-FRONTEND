@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">Show Person Details</button>
+    <div id="div">
+
+    </div>
+    <script>
+        let Person=[{
+            name:'Hari',age:'21',city:'Chennai'
+        },
+        {
+            name:'james',age:"31",city:'town'
+        }
+        ]
+        let btn=document.getElementById('btn1')
+        let content=document.getElementById('div')
+        btn.addEventListener('click',function(){
+            content.innerHTML+=''
+            for (let i=0;i<Person.length;i++){
+                content.innerHTML+=Person[i].name+'</br>',
+                content.innerHTML+=Person[i].age+'</br>',
+                content.innerHTML+=Person[i].city+'</br>'
+            }
+        })
+    </script>
+</body>
+</html>
