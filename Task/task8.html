@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <button id="btn1">Show The Movies</button>
+    <script>
+        let movies=['vikram','billa','animal']
+        let  showMovies=document.getElementById('h1')
+        let btn=document.getElementById('btn1')
+        btn.addEventListener('click',()=>{
+            for (let i=0;i<movies.length;i++){
+                showMovies.innerHTML+=movies[i]+'<br>'
+            }
+        })
+    </script>
+</body>
+</html>
