@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="inputBox" type="text" placeholder="Enter The name">
+    <button id="greetBtn">Greet Me</button>
+    <p id="ans"></p>
+    <script>
+        let input=document.getElementById('inputBox')
+        let btn=document.getElementById('greetBtn')
+        let greet=document.getElementById('ans')
+        btn.addEventListener('click',function(){
+           let greetMe=input.value 
+           ans.innerText=greetMe        
+        })
+    </script>
+</body>
+</html>
