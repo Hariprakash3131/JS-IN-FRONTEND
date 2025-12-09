@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click the Button</button>
+    <h1 id="showTheGreet"></h1>
+    <script>
+        let clickBtn=document.getElementById('btn')
+        let h=document.getElementById('showTheGreet')
+        clickBtn.addEventListener('click',greet)   
+             function greet(){
+                h.innerHTML='Welcome Hari'
+             }
+    </script>
+</body>
+</html>
