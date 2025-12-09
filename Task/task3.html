@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="number" placeholder="Enter the Age">
+    <button id="btn1">Button</button>
+    <p id="para"></p>
+    <script>
+        let age=document.getElementById('input')
+        let btn=document.getElementById('btn1')
+        let p=document.getElementById('para')
+        btn.addEventListener('click',()=>{
+            age=input.value
+            if(age>=18){
+                para.innerText='Your Eligible'
+            }
+            else{
+                para.innerText='Not Eligible'
+            }
+        })
+    </script>
+</body>
+</html>
