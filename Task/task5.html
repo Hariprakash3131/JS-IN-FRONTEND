@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p id="p">Lorem ipsum dolor sit amet.</p>
+    <button id="btnHide">Hide</button>
+    <button id="btnShow">Show</button>
+    <script>
+        let output=document.getElementById('p')
+        let btn1=document.getElementById('btnHide')
+        let btn2=document.getElementById('btnShow')
+        btn1.addEventListener('click',()=>{
+            output.style.display='none'
+        })
+        btn2.addEventListener('click',()=>{
+            output.style.display='block'
+        })
+    </script>
+</body>
+</html>
