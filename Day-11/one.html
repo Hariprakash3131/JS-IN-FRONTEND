@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- setTimeout -->
+     <button id="btn1">Show After 3 Sec</button>
+     <p id="para"></p>
+     <script>
+        let btn=document.getElementById('btn1')
+        let p=document.getElementById('para')
+        btn.addEventListener('click',function(){
+            p.innerText='Please wait...'
+
+            setTimeout(function(){
+                p.innerText="Hello! This message appeared after 3 seconds."
+            },3000)
+        })
+     </script>
+</body>
+</html>
