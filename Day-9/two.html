@@ -23,9 +23,10 @@
         btn.addEventListener('click',function(){
             content.innerHTML+=''
             for (let i=0;i<Person.length;i++){
-                content.innerHTML+=Person[i].name+'</br>',
-                content.innerHTML+=Person[i].age+'</br>',
-                content.innerHTML+=Person[i].city+'</br>'
+                content.innerHTML+=`
+                Name:${Person[i].name}<br>
+                Age:${Person[i].age}<br>
+                City:${Person[i].city}<br>`
             }
         })
     </script>
