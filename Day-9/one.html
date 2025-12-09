@@ -12,15 +12,14 @@
 
       </p>
       <script>
-        let bat=['ceat','mrf','puma','pm','rebook']
-        for (let i=0;i<bat.length;i++){
-            let arr=console.log(bat[i])
-        }
-
-        let btn =document.getElementById('btn1')
+         let bat=['ceat','mrf','puma','pm','rebook']
+         let btn =document.getElementById('btn1')
         let content=document.getElementById('div')
         btn.addEventListener('click',function(){
-            content.innerHTML+=arr
+            content.innerHTML+=''
+            for (let i=0;i<bat.length;i++){
+                content.innerHTML+=bat[i]+'</br>';
+            }
         })
        
       </script>
