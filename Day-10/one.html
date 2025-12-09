@@ -13,10 +13,12 @@
         let input=document.getElementById('inputBox')
         let btn=document.getElementById('greetBtn')
         let greet=document.getElementById('ans')
-        btn.addEventListener('click',function(){
-           let greetMe=input.value 
-           ans.innerText=greetMe        
-        })
+        btn.addEventListener('click',Hello)
+          function Hello(){
+                let greetMe=input.value
+                let name=' Hello '
+                ans.innerText=greetMe + name
+          }
     </script>
 </body>
 </html>
