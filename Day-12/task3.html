@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+
+<script>
+    let startBtn = document.getElementById("start");
+    let stopBtn = document.getElementById("stop");
+
+    let interval;
+
+    startBtn.onclick = () => {
+        interval = setInterval(() => {
+            let color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = color;
+        }, 1000);
+    };
+
+    stopBtn.onclick = () => {
+        clearInterval(interval);
+    };
+</script>
+
+</body>
+</html>
