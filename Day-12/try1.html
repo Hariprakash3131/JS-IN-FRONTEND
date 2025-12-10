@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">Empty Array</h1>
+    <button id="btn1">Start</button>
+    <button id="btn2">Stop</button>
+    <script>
+        let h1=document.getElementById('head')
+        let start=document.getElementById('btn1')
+        let stop=document.getElementById('btn2')
+        let arr=["Hello", "Welcome", "Good Morning", "JavaScript Rocks!"]
+        let empty=0;
+        let outputArray;
+        start.addEventListener('click',()=>{
+            outputArray=setInterval(()=>{
+                h1.innerHTML=arr[empty]
+                empty++
+
+            if(empty===arr.length){
+                empty=0
+            }
+            },1000)
+        })
+
+        stop.addEventListener('click',()=>{
+            clearInterval(outputArray)
+        })
+    </script>
+</body>
+</html>
