@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="plus">0</h1>
+    <button id="btn1">Start</button>
+    <button id="btn2">Stop</button>
+    <script>
+        let increase=document.getElementById('plus')
+        let start=document.getElementById('btn1')
+        let stop=document.getElementById('btn2')
+        let count=0;
+        let clock;
+        start.addEventListener('click',()=>{
+            clock=setInterval(()=>{
+                count++
+                increase.textContent=count
+            },500)
+        })
+        stop.addEventListener('click',()=>{
+            clearInterval(clock)
+        })
+    </script>
+</body>
+</html>
