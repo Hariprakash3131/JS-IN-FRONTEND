@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="item">Lorem ipsum dolor sit amet.</p>
+    <p class="item">Lorem ipsum dolor sit amet.</p>
+    <p class="item">Lorem ipsum dolor sit amet.</p>
+    <button id="btn1">Highlight All</button>
+    <script>
+        
+        let btn=document.getElementById('btn1')
+        btn.addEventListener('click',()=>{
+            let p=document.querySelectorAll('.item')
+            for (let i=0;i<p.length;i++){
+                p[i].style.color='red',
+                p[i].style.fontWeight='bold'
+            }
+        })
+    </script>
+</body>
+</html>
