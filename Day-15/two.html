@@ -10,7 +10,17 @@
     <button id="btn1">Submit</button>
     <p id="para">Your Name Will Be show</p>
     <script>
-        let 
+        let name=document.getElementById('getName')
+        let btn=document.getElementById('btn1')
+        let p=document.getElementById('para')
+        let gName;
+        btn.addEventListener('click',()=>{
+            
+            localStorage.setItem('key',name.value)
+            gName=localStorage.getItem('key')
+            p.innerText=gName
+
+        })
     </script>
 </body>
 </html>
