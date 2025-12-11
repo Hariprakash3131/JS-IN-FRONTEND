@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14 - localStorage</title>
+</head>
+<body>
+
+    <input id="getName" type="text" placeholder="Enter the name">
+    <button id="btn1">Save Name</button>
+    <p id="para">Your Name Will Be Shown Here</p>
+
+    <script>
+        let nameInput = document.getElementById('getName');
+        let btn = document.getElementById('btn1');
+        let p = document.getElementById('para');
+
+        //  Load saved name when page refreshes
+        window.onload = function () {
+            let savedName = localStorage.setItem('savedName');
+            if (savedName) {
+                p.innerText = "Saved Name: " + savedName;
+            }
+        }
+
+        //  Save name on button click
+        btn.addEventListener('click', () => {
+            let userName = nameInput.value;
+
+            localStorage.getItem('savedName', userName);
+
+            p.innerText = "Saved Name: " + userName;
+        });
+    </script>
+
+</body>
+</html>
