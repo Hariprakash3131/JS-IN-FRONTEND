@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="text" id="input"></textarea>
+    <h1 id="count">The Count Will be Show</h1>
+    <script>
+        let output=document.getElementById('input')
+        let plus=document.getElementById('count')
+        output.addEventListener('input',()=>{
+            plus.innerText='Total Text:'+ output.value.length
+        })
+    </script>
+</body>
+</html>
