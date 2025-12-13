@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Enter The name">
+    <input type="password" id="password" placeholder="Enter The Password" >
+    <button id="btn1">Submit</button>
+    <p id="para"></p>
+    
+    <script>
+        let userName=document.getElementById('name')
+        let userPass=document.getElementById('password')
+        let btn=document.getElementById('btn1')
+        let p=document.getElementById('para')
+        btn.addEventListener('click',()=>{
+            if(userName.value===""){
+                p.innerText="Username is required"
+                p.style.color='red'
+            }
+            else if(userPass.value===""){
+                p.innerText="Password is required"
+                p.style.color='red'
+            }
+            else if(userPass.value.length<6){
+                p.innerText="Must be add 7 "
+                p.style.color='red'
+            }
+            else{
+                p.innerText='Login successful'
+                p.style.color='green'
+            }
+        })
+
+    </script>
+</body>
+</html>
