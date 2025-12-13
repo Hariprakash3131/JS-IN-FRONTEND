@@ -11,8 +11,8 @@
     <script>
         let textInput=document.getElementById('texts')
         let count=document.getElementById('plus')
-        count.addEventListener('input',()=>{
-            textInput.innerHTML=count.value.length
+        textInput.addEventListener('input',()=>{
+            count.innerText='Total Text:'+textInput.value.length
         })
     </script>
 </body>
