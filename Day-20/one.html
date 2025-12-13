@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1" data-color="red">Red</button>
+    <button id="btn2" data-color="blue">Blue</button>
+    <button id="btn3" data-color="green">Green</button>
+    <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe ea obcaecati odit suscipit labore sit ex repellendus sequi? Sit quaerat nobis ut. Fugit nesciunt quaerat cum, molestiae temporibus minus consectetur.</p>
+    <script>
+        let red=document.getElementById('btn1')
+        let blue=document.getElementById('btn2')
+        let green=document.getElementById('btn3')
+        let p=document.getElementById('para')
+        red.addEventListener('click',(e)=>{
+            p.style.color=e.target.dataset.color
+        })
+        blue.addEventListener('click',(e)=>{
+            p.style.color=e.target.dataset.color
+        })
+        green.addEventListener('click',(e)=>{
+            p.style.color=e.target.dataset.color
+        })
+        
+    </script>
+</body>
+</html>
