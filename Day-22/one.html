@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 21 - Dynamic List</title>
+</head>
+<body>
+
+    <input type="text" id="input" placeholder="Enter the Text">
+    <button id="btn1">Add Item</button>
+
+    <ul id="ulList"></ul>
+
+    <script>
+        let getInput = document.getElementById('input');
+        let btn = document.getElementById('btn1');
+        let list = document.getElementById('ulList');
+
+        btn.addEventListener('click', () => {
+
+            if (getInput.value === "") return;
+
+            // create li
+            let li = document.createElement('li');
+            li.innerText = getInput.value + " ";
+
+            // create delete button
+            let delBtn = document.createElement('button');
+            delBtn.innerText = "Delete";
+
+            // delete functionality
+            delBtn.addEventListener('click', () => {
+                li.remove();
+            });
+
+            li.appendChild(delBtn);
+            list.appendChild(li);
+
+            getInput.value = ""; // clear input
+        });
+    </script>
+
+</body>
+</html>
