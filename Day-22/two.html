@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text" placeholder="Enter The Item">
+    <button id="btn1">Add Item</button>
+    <ul id="ul">
+
+    </ul>
+    <script>
+        let input=document.getElementById('text')
+        let btn=document.getElementById('btn1')
+        let list=document.getElementById('ul')
+
+        btn.addEventListener('click',()=>{
+            if(input.value===""){
+                return
+            }
+            let addLi=document.createElement('li')
+            addLi.innerText=input.value+""
+
+            let delBtn=document.createElement('button')
+            delBtn.innerText='Delete The item'
+
+            delBtn.addEventListener('click',()=>{
+                addLi.remove()
+
+            })
+
+            addLi.appendChild(delBtn)
+            list.appendChild(addLi)
+
+            input.value =""
+        })
+    </script>
+</body>
+</html>
