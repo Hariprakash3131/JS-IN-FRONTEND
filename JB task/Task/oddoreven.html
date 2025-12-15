@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Or Even</title>
+</head>
+<body>
+    <h1>Check odd or even</h1>
+    <input type="number"  id="number" placeholder="Enter The Number">
+    <button id="btn1">Submit</button>
+    <h2 id="value"></h2>
+    <script>
+        let input=document.getElementById('number')
+        let btn=document.getElementById('btn1')
+        let ans=document.getElementById('value')
+        btn.addEventListener('click',()=>{
+            let num=input.value
+            if(num%2==0){
+                ans.innerText=input.value +'is a Even Number'
+            }
+            else{
+                ans.innerText=input.value +'is a Odd Number'
+            }
+        })
+    </script>
+
+</body>
+</html>
