@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cards with Delete</title>
+
+<style>
+  body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+    padding:30px;
+  }
+
+  .card{
+    background:#fff;
+    padding:15px 20px;
+    margin-bottom:15px;
+    border-radius:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .card p{
+    margin:0;
+    font-size:16px;
+    color:#333;
+  }
+
+  .card button{
+    background:#ff4d4d;
+    color:#fff;
+    border:none;
+    padding:8px 14px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+  }
+
+  .card button:hover{
+    background:#e60000;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <p>Card 1: Learn HTML basics</p>
+  <button class="dltbtn">Delete</button>
+</div>
+
+<div class="card">
+  <p>Card 2: Practice CSS layouts</p>
+  <button class="dltbtn">Delete</button>
+</div>
+
+<div class="card">
+  <p>Card 3: Understand JavaScript DOM</p>
+  <button class="dltbtn">Delete</button>
+</div>
+
+<div class="card">
+  <p>Card 4: Build small projects</p>
+  <button class="dltbtn">Delete</button>
+</div>
+
+<div class="card">
+  <p>Card 5: Prepare for interviews</p>
+  <button class="dltbtn">Delete</button>
+</div>
+<script>
+   let deleteBtn=document.querySelectorAll('.dltbtn')
+   deleteBtn.forEach(btn=>{
+    btn.addEventListener('click',function(e){
+        let cards=e.target.closest('.card')
+        cards.remove()
+    })
+   })
+</script>
+</body>
+</html>
