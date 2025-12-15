@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Card List</title>
+
+<style>
+  body{
+    font-family: Arial, sans-serif;
+    background:#f2f4f7;
+    padding:30px;
+  }
+
+  .card{
+    background:#fff;
+    padding:15px 20px;
+    margin-bottom:15px;
+    border-radius:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .card p{
+    margin:0;
+    font-size:16px;
+    color:#333;
+  }
+
+  .buttons{
+    display:flex;
+    gap:10px;
+  }
+
+  .likes{
+    background:#4caf50;
+    color:#fff;
+    border:none;
+    padding:7px 14px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+  }
+
+  .likes:hover{
+    background:#43a047;
+  }
+
+  .delete{
+    background:#f44336;
+    color:#fff;
+    border:none;
+    padding:7px 14px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+  }
+
+  .delete:hover{
+    background:#d32f2f;
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="card">
+  <p>Learn HTML basics</p>
+  <div class="buttons">
+    <button class="likes">Like</button>
+    <button class="delete">Delete</button>
+  </div>
+</div>
+
+<div class="card">
+  <p>Practice CSS layouts</p>
+  <div class="buttons">
+    <button class="likes">Like</button>
+    <button class="delete">Delete</button>
+  </div>
+</div>
+
+<div class="card">
+  <p>Understand JavaScript DOM</p>
+  <div class="buttons">
+    <button class="likes">Like</button>
+    <button class="delete">Delete</button>
+  </div>
+</div>
+
+<div class="card">
+  <p>Build mini projects</p>
+  <div class="buttons">
+    <button class="likes">Like</button>
+    <button class="delete">Delete</button>
+  </div>
+</div>
+
+<div class="card">
+  <p>Prepare for interviews</p>
+  <div class="buttons">
+    <button class="likes">Like</button>
+    <button class="delete">Delete</button>
+  </div>
+</div>
+</div>
+<script>
+  let containers=document.querySelector('.container')
+  containers.addEventListener('click',(e)=>{
+    if(e.target.matches('.delete')){
+        e.target.closest('.card').remove()
+    }
+    if(e.target.matches('.likes'))
+    {
+        e.target.innerText='Liked',
+        e.target.style.background='red'
+    }
+  })
+</script>
+</body>
+</html>
