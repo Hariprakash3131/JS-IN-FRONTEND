@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div p{
+            padding: 15px;
+            border: 2px solid black;
+            margin: 5px 0;
+        }
+        .active{
+            color: aqua;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <p>This is 1 Paragraph</p>
+        <p class="active">This is 2 Paragraph</p>
+        <p>This is 3 Paragraph</p>
+    </div>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+
+    <script>
+        let container=document.querySelector('.div')
+      //  let p=container.children  //optional
+
+        let current=document.querySelector('.active')
+        
+        document.getElementById('next').addEventListener('click',()=>{
+            let next=current.nextElementSibling
+            if(next){
+                current.classList.remove('active')
+                next.classList.add('active')
+                current=next
+            }
+        })
+
+
+        document.getElementById('prev').addEventListener('click',()=>{
+            let prev=current.previousElementSibling
+            if(prev){
+                current.classList.remove('active')
+                prev.classList.add('active')
+                current=prev
+            }
+        })
+
+        
+    </script>
+</body>
+</html>
