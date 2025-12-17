@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Static Template</title>
+  
+  </head>
+  <body>
+    <label>Input 1</label>
+    <input id="in1" oninput="calculateSum()"/>
+    <br><br>
+    <label>Input 2</label>
+    <input id="in2" oninput="calculateSum()"/>
+    <p>The Sum of input 1 and input 2 is</p>
+    <p id="result"></p>
+     <script>
+        let show=document.getElementById('result')
+        function calculateSum(){
+            let a=Number(in1.value)
+            let b=Number(in2.value)
+            let plus=a+b
+            show.innerText=plus
+
+        }
+     </script>
+  </body>
+</html>
+</body>
+</html>
