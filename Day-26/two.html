@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="card">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button id="btn1">Click</button>
+    </div>
+
+    <script>
+        let div=document.getElementById('card')
+        let btn=document.getElementById('btn1')
+        div.addEventListener('click',()=>{
+            alert('Card Clicked')
+        })
+        btn.addEventListener('click',(e)=>{
+            e.stopPropagation()
+            alert('Delete Clicked')
+        })
+    </script>
+</body>
+</html>
