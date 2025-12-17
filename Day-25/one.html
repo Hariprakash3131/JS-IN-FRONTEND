@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Day 24 - DOM Traversing</title>
+
+    <style>
+        .container p {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 5px 0;
+        }
+        .active {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div class="container">
+        <p>Paragraph 1</p>
+        <p class="active">Paragraph 2</p>
+        <p>Paragraph 3</p>
+    </div>
+
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+
+    <script>
+        let container = document.querySelector(".container");
+        let paragraphs = container.children;
+
+        let current = document.querySelector(".active");
+
+        document.getElementById("next").addEventListener("click", () => {
+            let next = current.nextElementSibling;
+            if (next) {
+                current.classList.remove("active");
+                next.classList.add("active");
+                current = next;
+            }
+        });
+
+        document.getElementById("prev").addEventListener("click", () => {
+            let prev = current.previousElementSibling;
+            if (prev) {
+                current.classList.remove("active");
+                prev.classList.add("active");
+                current = prev;
+            }
+        });
+    </script>
+
 </body>
 </html>
