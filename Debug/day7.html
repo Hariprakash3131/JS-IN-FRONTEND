@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="list"></div>
+<button id="btn1">Add</button>
+
+<script>
+  let add=document.getElementById('list')
+ let btn=document.getElementById('btn1')
+ btn.addEventListener('click',()=>{
+
+    add.innerHTML+='<p>Item</p>'
+ })
+</script>
+
+</body>
+</html>
