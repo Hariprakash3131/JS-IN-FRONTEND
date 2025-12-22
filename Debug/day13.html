@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .mainContainer {
+            display: flex;
+            justify-content: center;
+            padding-top: 60px;
+
+        }
+
+        .maininnerContainer {
+            border: 1px solid black;
+            width: 459px;
+            min-height: 500px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            justify-content: center;
+        }
+
+        .inboxsec {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 10px;
+            /* label & input spacing */
+        }
+
+        .inboxsec label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .inboxsec input {
+            width: 100%;
+            height: 42px;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+
+        }
+
+        .inboxsec input:focus {
+            border-color: black;
+            box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.15);
+        }
+
+        .forge {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .buttonSec {
+            margin-top: 10px;
+            background-color: black;
+            border-radius: 6px;
+        }
+
+        .buttonSec input {
+             width: 100%;
+            height: 42px;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+             border-radius: 6px;
+            background-color: black;
+            font-size: 14px;
+            outline: none;
+            color: azure;
+        }
+
+        .buttonSec input:hover {
+             border-color: green;
+            box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="maininnerContainer">
+            <div class="headSec">
+                <h2>Welcome Back</h2>
+                <p style="font-weight: 100;font-size: 10px;">Welcome Back, Please enter your details,</p>
+            </div>
+            <div class="inboxsec">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <div class="forge">
+                <p>Forget Password?</p>
+            </div>
+            <div class="buttonSec" style="margin-top: 25px;">
+                <input type="button" value="Login">
+            </div>
+            <div class="buttonSec">
+                <input type="button" value="login with Google">
+            </div>
+            <div class="accoutn" style="align-items: center;text-align: center;margin-top: 10px;">
+                <p><span style="font-weight: 400;font-size: 10px;text-align: center;">Don't you have an
+                        account?</span>   <span style="font-weight: bold;font-size: 10px;text-align: center;">Sign up for
+                        free</span></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
