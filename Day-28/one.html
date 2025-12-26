@@ -6,6 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <input type="text" id="search" placeholder="Enter The text">
+    <p id="output"></p>
+    <script>
+        let input=document.getElementById('search')
+        let show=document.getElementById('output')
+        let timer;
+        input.addEventListener('input',()=>{
+            clearTimeout(timer)
+        })
+
+        timer=setTimeout(()=>{
+            input.value
+            
+        })
+    </script>
 </body>
 </html>
