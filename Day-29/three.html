@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Normal vs Throttle Button</title>
+    <style>
+        button {
+            padding: 12px 18px;
+            margin: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Normal Click Button</h2>
+    <button id="normalBtn">Normal Click</button>
+    <p>Normal Click Count: <span id="normalCount">0</span></p>
+
+    <hr>
+
+    <h2>Throttle Click Button (2 seconds)</h2>
+    <button id="throttleBtn">Throttle Click</button>
+    <p>Throttle Click Count: <span id="throttleCount">0</span></p>
+
+    <script>
+        // Normal button count
+        let normalCount = 0;
+        document.getElementById("normalBtn").addEventListener("click", function () {
+            normalCount++;
+            document.getElementById("normalCount").innerText = normalCount;
+        });
+
+        // Throttle button count
+        let throttleCount = 0;
+        let isThrottled = false;
+
+        document.getElementById("throttleBtn").addEventListener("click", function () {
+            if (!isThrottled) {
+                throttleCount++;
+                document.getElementById("throttleCount").innerText = throttleCount;
+
+                isThrottled = true;
+
+                setTimeout(function () {
+                    isThrottled = false;
+                }, 2000); // 2 seconds delay
+            }
+        });
+    </script>
+
+</body>
+</html>

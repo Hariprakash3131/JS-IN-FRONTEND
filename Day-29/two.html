@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button Throttle Example</title>
+    <style>
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        p {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn">Click Me Fast 😄</button>
+    <p id="output">Waiting for click...</p>
+
+    <script>
+        let isThrottled = false;
+
+        document.getElementById("btn").addEventListener("click", function () {
+            if (!isThrottled) {
+                document.getElementById("output").innerText = "Button clicked!";
+
+                isThrottled = true;
+
+                setTimeout(function () {
+                    isThrottled = false;
+                }, 2000); // 2 seconds throttle
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Throttle Scroll Example</title>
+    <style>
+        body {
+            height: 2000px; /* Long page for scrolling */
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        p {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: #222;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="msg">Scroll to see throttle effect</p>
+
+    <script>
+        let isThrottled = false;
+
+        window.addEventListener("scroll", function () {
+            if (!isThrottled) {
+                document.getElementById("msg").innerText = "Scrolling detected...";
+
+                isThrottled = true;
+
+                setTimeout(function () {
+                    isThrottled = false;
+                }, 3000);
+            }
+        });
+    </script>
+
+</body>
+</html>
