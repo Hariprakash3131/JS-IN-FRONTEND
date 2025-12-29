@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Normal Count </h1>
+    <button id="btn1">Click Normal Count</button>
+    <h1>Normal Click Count:<span id="normalClick">0</span></h1>
+    
+    <hr>
+    <h1>Throttle Count</h1>
+    <button id="btn2">Throttle Count Click</button>
+    <h1>Throttle Click Count:<span id="throttleClick">0</span></h1>
+    <script>
+        let normalBtn=document.getElementById('btn1')
+        let normalCount=document.getElementById('normalClick')
+        let count=0;
+        normalBtn.addEventListener('click',()=>{
+            count++
+            normalCount.innerText=count
+        })
+        
+        let throttleBtn=document.getElementById('btn2')
+        let throttleCount=document.getElementById('throttleClick')
+        let throttle=0;
+        let isThrottled=false
+        throttleBtn.addEventListener('click',()=>{
+            if(!isThrottled) {
+           
+            throttle++
+            throttleCount.innerText=throttle
+            
+            isThrottled=true
+            setTimeout(()=>{
+                isThrottled=false
+            },3000)
+        }
+        })
+    
+    </script>
+</body>
+</html>
