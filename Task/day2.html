@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" placeholder="Enter The text:">
+    <button id="btn1">Show</button>
+    <p id="p"></p>
+    <script>
+        let show=document.getElementById('input')
+        let btn=document.getElementById('btn1')
+        let para=document.getElementById('p')
+        btn.addEventListener('click',function(){
+            let inputShow=show.value
+            para.innerText=inputShow
+        })
+    </script>
+</body>
+</html>
