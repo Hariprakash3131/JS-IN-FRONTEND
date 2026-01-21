@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">Products</button>
+    <ul id="listOut"></ul>
+
+    <script>
+        let btn=document.getElementById('btn1')
+        let listShow=document.getElementById('listOut')
+        btn.addEventListener('click',()=>{
+            fetch('https://dummyjson.com/products')
+            .then(response =>response.json())
+            .then(data=>{
+                let product=data.products
+                listShow.innerHTML="";
+                for (i=0;i<product.length;i++){
+                    listShow.innerHTML+=`
+                    <li><b>Name:</b>${product[i].tittle} <br>
+                   <b>Description:</b>${product[i].description}</li>
+                   <hr>
+                    `
+                }
+            })
+        })
+    </script>
+</body>
+</html>
