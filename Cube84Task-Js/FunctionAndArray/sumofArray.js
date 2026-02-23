@@ -1,9 +1,9 @@
-function sumOfArray(){
-    let num=[1,2,3,4]
-    let sum=0
-    for (let i=1;i<=num;i++){
-        return sum++
+function sumofArray(arr){
+    let add=0
+    for (let i=0;i< arr.length;i++){
+        add+= arr[i]
     }
+    return add
 }
-
-console.log(sumOfArray())
+let array1=[1,2,3,4]
+console.log(sumofArray(array1))
