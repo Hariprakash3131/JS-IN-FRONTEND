@@ -1,8 +1,7 @@
 function multiplyElements(arr){
-    multiply=[0]
-    for(i=1;i<=arr.length;i++){
-        arr[i]*arr[i]
-        multiply.push(arr[i])
+   let  multiply=1
+    for(i=1;i< arr.length;i++){
+        multiply=multiply*arr[i]
         
     }
     return multiply
