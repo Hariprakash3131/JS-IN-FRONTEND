@@ -6,6 +6,6 @@ function palindrome(a){
         reverse=reverse*10+lastNum
         a=Math.floor(a/10)
     }
-    return crt === reverse
+    return reverse
 }
-console.log(palindrome(121))
+console.log(palindrome(123))

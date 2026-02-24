@@ -1,10 +1,10 @@
-function reverse(arr){
-    let num=[]
-    for(let i=1;i<arr.length-1;i--){
-       let reversed=arr[i]
-       num.push(reversed)
+function reverseArray(arr){
+    let reverse=0
+    while(arr>0){
+        let lastNumber=arr%10
+        reverse=reverse*10+lastNumber
+        arr=Math.floor(arr/10)
     }
-
+    return reverse
 }
-let array=[1,2,3]
-console.log(reverse(array))
+console.log(reverseArray(421))
