@@ -17,3 +17,6 @@ person.age='27'
 console.log(person.name)
 console.log(person.name+" "+person.lastName)
 console.log(person.age)
+
+delete person.age
+console.log(person)
