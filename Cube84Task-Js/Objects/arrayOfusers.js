@@ -10,7 +10,6 @@ users.forEach(user=>{
     }
 })
 
-
 let count=0
 users.forEach(user=>{
     if(user.isActive===false){
