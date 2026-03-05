@@ -3,7 +3,7 @@ let a=new Promise((resolve)=>{
 })
 
 a.then((value)=>{
-    return 
+    return value
 })
 
 console.log(a)
