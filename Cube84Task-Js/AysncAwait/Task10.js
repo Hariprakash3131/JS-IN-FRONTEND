@@ -10,6 +10,7 @@ function users(){
           arr.forEach((array)=>{
             if(array.isActive===true){
             console.log(array)
+    
            }
            else{
             console.log('Not Fetch')

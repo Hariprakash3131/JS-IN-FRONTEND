@@ -10,10 +10,6 @@ function errorHandling(){
     }
 })
 }
-
-
-
-
 async function errorNoticed(){
     try
     {           
