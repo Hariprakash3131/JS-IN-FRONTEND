@@ -8,7 +8,8 @@ function assignTask(taskId, userId) {
     const tasks = getTasks();
     const users = getUsers();
 
-    const task = tasks.find(t => t.id === taskId);
+    const task = tasks.find((t)=>
+         t.id === taskId);
     const user = users.find(u => u.id === userId);
 
     if (!task) {
