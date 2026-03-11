@@ -1,63 +1,45 @@
-// users.js
+const {createUsersId}=require('./utils')
 
-const { generateUserId } = require("./utils");
+let users=[]
 
-let users = [];
-let emailSet = new Set();
+let emailCheck=new Set()
 
-function addUser(name, email, role) {
-
-    if (emailSet.has(email)) {
-        throw new Error("Email already exists");
+function addUsers(name,email,role){
+    if(emailCheck.has(email)){
+        throw new error ("This email Id already exists")
     }
 
-    const user = {
-        id: generateUserId(),
+    const user={
+        id:createUsersId(),
         name,
         email,
         role,
-        isActive: true
-    };
-
-    users.push(user);
-    emailSet.add(email);
-
-    console.log("User created:", name);
+        isActive: true 
+    }
+    users.push(user)
+    emailCheck.add(email)
+    console.log('User Created:',name)
 }
 
-function removeUser(id) {
-
-    users = users.filter(user => user.id !== id);
-    console.log("User removed:", id);
-
+function listUsers(){
+    console.log("ALL Users")
+    users.forEach((u)=>{
+        console.log(u)
+    })
 }
 
-function listUsers() {
 
-    console.log("----- Users -----");
-
-    users.forEach(user => {
-        console.log(user);
-    });
-
+function findUserId(id){
+    return users.find((user)=>user.id===id)
 }
 
-function findUserById(id) {
-
-    return users.find(user => user.id === id);
-
+function getUsers(){
+    return users
 }
 
-function getUsers() {
-
-    return users;
-
-}
-
-module.exports = {
-    addUser,
-    removeUser,
+module.exports={
+    addUsers,
     listUsers,
-    findUserById,
+    findUserId,
     getUsers
-};
+}
