@@ -1,69 +1,47 @@
-// tasks.js
+const {createTasksId,createDate}=require('./utils')
 
-const { generateTaskId, getCurrentDate } = require("./utils");
+let tasks=[]
 
-let tasks = [];
-
-function createTask(title, description, priority) {
-
-    const task = {
-        id: generateTaskId(),
+function createTasks(title,description,priority){
+    const task={
+        id:createTasksId(),
         title,
         description,
-        assignedUserId: null,
-        status: "pending",
+        status:"pending",
         priority,
-        createdAt: getCurrentDate()
-    };
-
-    tasks.push(task);
-
-    console.log("Task created:", title);
-
+        createdAt:createDate()
+    }
+    tasks.push(task)
+    console.log('Task Created:',title)
 }
 
-function updateTaskStatus(id, status) {
+function updateTaskStatus(id,status){
+    const task=tasks.find((t)=>{
+        t.id===id
+    })
 
-    const task = tasks.find(t => t.id === id);
-
-    if (!task) {
-        throw new Error("Task not found");
+    if(!task){
+        throw new error("Task Not Found")
     }
 
-    task.status = status;
-
-    console.log("Task status updated:", status);
-
+    task.status=status
+    console.log("Tasks Status Updated:",status)
 }
 
-function deleteTask(id) {
-
-    tasks = tasks.filter(task => task.id !== id);
-
-    console.log("Task deleted:", id);
-
+function listTasks(){
+    console.log("Tasks")
+    tasks.forEach(task=>{
+        console.log(task)
+    })
 }
 
-function listTasks() {
-
-    console.log("----- Tasks -----");
-
-    tasks.forEach(task => {
-        console.log(task);
-    });
-
+function getTask(){
+    return tasks
 }
 
-function getTasks() {
-
-    return tasks;
-
-}
-
-module.exports = {
-    createTask,
+module.exports={
+    createTasks,
     updateTaskStatus,
-    deleteTask,
     listTasks,
-    getTasks
-};
+    getTask
+}
