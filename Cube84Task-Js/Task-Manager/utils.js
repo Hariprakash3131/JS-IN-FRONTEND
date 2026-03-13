@@ -1,5 +1,5 @@
-let usersId=1
-let tasksId=1
+let usersId = 1
+let tasksId = 1
 
 function createUsersId(){
     return usersId++
@@ -13,7 +13,7 @@ function createDate(){
     return new Date()
 }
 
-module.exports={
+module.exports = {
     createUsersId,
     createTasksId,
     createDate

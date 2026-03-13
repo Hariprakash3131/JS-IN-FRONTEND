@@ -1,59 +1,56 @@
-// services.js
+const { getUsers } = require('./users')
+const { getTask } = require('./task')
 
-const { getUsers } = require("./users");
-const { getTasks } = require("./task");
+function assignTask(taskId,userId){
 
-function assignTask(taskId, userId) {
+    const tasks = getTask()
+    const users = getUsers()
 
-    const tasks = getTasks();
-    const users = getUsers();
+    const task = tasks.find(t => t.id === taskId)
+    const user = users.find(u => u.id === userId)
 
-    const task = tasks.find((t)=>
-         t.id === taskId);
-    const user = users.find(u => u.id === userId);
-
-    if (!task) {
-        throw new Error("Task does not exist");
+    if(!task){
+        throw new Error("Task does not exist")
     }
 
-    if (!user) {
-        throw new Error("User does not exist");
+    if(!user){
+        throw new Error("User does not exist")
     }
 
-    task.assignedUserId = userId;
+    task.assignedUserId = userId
 
-    console.log("Task assigned to", user.name);
-
+    console.log("Task assigned to", user.name)
 }
 
-function taskStatistics() {
+function taskStatistics(){
 
-    const tasks = getTasks();
-    const users = getUsers();
+    const tasks = getTask()
+    const users = getUsers()
 
-    let total = tasks.length;
-    let completed = tasks.filter(t => t.status === "completed").length;
-    let pending = tasks.filter(t => t.status === "pending").length;
+    let total = tasks.length
 
-    console.log("----- Task Statistics -----");
+    let completed = tasks.filter(t => t.status === "completed").length
+    let pending = tasks.filter(t => t.status === "pending").length
 
-    console.log("Total Tasks:", total);
-    console.log("Completed Tasks:", completed);
-    console.log("Pending Tasks:", pending);
+    console.log(" Task Statistics ")
 
-    console.log("Tasks per User:");
+    console.log("Total Tasks:", total)
+    console.log("Completed Tasks:", completed)
+    console.log("Pending Tasks:", pending)
+
+    console.log("Tasks per User:")
 
     users.forEach(user => {
 
-        let count = tasks.filter(t => t.assignedUserId === user.id).length;
+        let count = tasks.filter(t => t.assignedUserId === user.id).length
 
-        console.log(user.name, "→", count);
+        console.log(user.name, "→", count)
 
-    });
+    })
 
 }
 
 module.exports = {
     assignTask,
     taskStatistics
-};
+}

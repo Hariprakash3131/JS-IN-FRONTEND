@@ -1,35 +1,34 @@
-// app.js
+const { addUsers, listUsers } = require("./users")
+const { createTasks, updateTaskStatus, listTasks } = require("./task")
+const { assignTask, taskStatistics } = require("./service")
 
-const { addUser, listUsers } = require("./users");
-const { createTask, updateTaskStatus, listTasks } = require("./task");
-const { assignTask, taskStatistics } = require("./service");
+async function main(){
 
-async function main() {
+    try{
 
-    try {
+        addUsers("Subash","subash123@email.com","developer")
+        addUsers("prakash","praksh1234@email.com","designer")
 
-        addUser("John", "john@email.com", "developer");
-        addUser("Sarah", "sarah@email.com", "designer");
+        createTasks("Build Login API","Authentication system","high")
+        createTasks("Design Dashboard","UI layout","medium")
 
-        createTask("Build Login API", "Authentication system", "high");
-        createTask("Design Dashboard", "UI layout", "medium");
+        assignTask(1,1)
+        assignTask(2,2)
 
-        assignTask(1, 1);
-        assignTask(2, 2);
+        updateTaskStatus(1,"completed")
 
-        updateTaskStatus(1, "completed");
+        listUsers()
+        listTasks()
 
-        listUsers();
-        listTasks();
+        taskStatistics()
 
-        taskStatistics();
+    }
+    catch(error){
 
-    } catch (error) {
-
-        console.log("Error:", error.message);
+        console.log("Error:", error.message)
 
     }
 
 }
 
-main();
+main()
