@@ -18,7 +18,7 @@ function removeProducts(){
    products=products.filter((p)=>{
     return p.id!==2
    })
-    console.log("Product with id 1 removed",remove.name)
+    console.log("Product with id 1 removed:",remove.name)
     
 }
 

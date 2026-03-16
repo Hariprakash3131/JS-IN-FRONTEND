@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API Example</title>
+</head>
+<body>
+  <h1>API Example</h1>
+
+  <script>
+    // API endpoint
+    const apiURL = "https://jsonplaceholder.typicode.com/users";
+
+    // Fetch data from API
+    fetch(apiURL)
+      .then(response => response.json()) // Convert to JSON
+      .then(data => {
+        console.log("✅ API Data:", data);
+      })
+      .catch(error => {
+        console.error("❌ Error:", error);
+      });
+  </script>
+</body>
+</html>
