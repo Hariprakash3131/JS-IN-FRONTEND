@@ -34,9 +34,9 @@ function listUsers(){
 
 }
 
-function findUserId(id){
-    return users.find(user => user.id === id)
-}
+// function findUserId(id){
+//     return users.find(user => user.id === id)
+// }
 
 function getUsers(){
     return users
@@ -45,6 +45,6 @@ function getUsers(){
 module.exports = {
     addUsers,
     listUsers,
-    findUserId,
+    // findUserId,
     getUsers
 }
