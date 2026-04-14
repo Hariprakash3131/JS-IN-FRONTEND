@@ -11,9 +11,9 @@ const sub=(s,o)=>{
 sub(30,20)
 
 
-const sarath=(q,w)=>q+w
+const s=(q,w)=>q+w
 
-console.log(sarath(10,200))
+console.log(s(10,200))
 
 
 const mul=(e,r)=>{
