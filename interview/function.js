@@ -10,3 +10,4 @@ function person(name){   //name  is a parameter
 person('Surya')  // surya is arguments
 person('Subash') //Subash is arguments
 
+greet("Lavada")
